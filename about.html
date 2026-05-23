@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximillian May - About</title>
+    <link rel="stylesheet" href="css/photography.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav id="main-nav">
+        <div id="nav-name">MAXIMILLIAN MAY</div>
+        <div id="nav-links">
+            <a href="photography.html#favorites" class="nav-link">Favorites</a>
+            <a href="photography.html" class="nav-link">Grid</a>
+            <a href="rugby.html" class="nav-link">Rugby</a>
+            <a href="map.html" class="nav-link">Map</a>
+            <a href="about.html" class="nav-link active">About</a>
+            <a href="https://www.instagram.com/max_mayy/" target="_blank" id="nav-instagram" class="nav-link">
+                <img src="assets/images/instagram.png" alt="Instagram" class="instagram-icon">
+            </a>
+        </div>
+    </nav>
+
+    <!-- About Content -->
+    <div id="about-content">
+        <div class="about-container">
+            <h1>About Me</h1>
+            <p>
+                I am Maximillian May, a Chinese American from Guangzhou, China. I am a junior at Colorado College, majoring in Computer Science and minoring in Art Studio. My undergraduate research
+                focuses on finding a solution for the shortcomings of modern mental health crisis care.
+            </p>
+            <p>
+                I do photography to preserve the moments of my life that I would otherwise end up forgetting. It helps me hold on to the present just as much as it retains the past.
+            </p>
+            <p>
+                On top of this, photography is another medium of creativity that allows me to outwardly present the things that I care for in this world. I can express passion, disappointment, empathy,
+                and love through a lens that can tell unspoken stories.  
+            </p>
+            <!-- Future Projects Section -->
+            <section class="about-section">
+                <h2>Future Projects</h2>
+                <div class="projects-list">
+                    <div class="project-item">
+                        <h3>Manila, Philippines</h3>
+                        <p>As a part of my Keller Family Venture Grant, I will be taking photographs of the environment, community, and culture in Manila that facilitate the 
+                            practice of communal mental health care. </p>
+                        <h3>Tornio, Finland</h3>
+                        <p>I will be exploring a town that fully implemented the mental health crisis care strategy of Open Dialogue, a holistic and personal approach to caring for
+                            people who are going through a mental health crisis. This is funded by Colorado College Grants in Writing.
+                        </p>
+                        <h3>Vienna, Austria</h3>
+                        <p>This city holds an incredible history of mental health care, both revolutionary and destructive. I will be focusing on the architecture of care, specifically with the Narrenturm and Otto Wagner's
+                            Stenhof Psychiatric Hospital, which have both converted into museums. This is funded by the Edith Kirsch Prize. 
+                        </p>
+                    <!-- Add more projects as needed -->
+                </div>
+
+                <h2>Past Projects</h2>
+                <div class="projects-list">
+                    <div class="project-item">
+                        <h3>Spain</h3>
+                        <p>Sail the Canary Islands. Funded by Colorado College Outdoor Education.</p>
+                        <h3>Ecuador</h3>
+                        <p>Spoke with local farmers in the Andean-Amazonian foothills, Quito, and the Galapagos. After the duration of the class, a small group also visiting Cotopaxi. Began birding lol.</p>
+                    </div>
+                    <!-- Add more projects as needed -->
+                </div>
+            </section>
+
+            <!-- Contact Me Section -->
+            <section class="about-section">
+                <h2>Contact Me</h2>
+
+                <!-- Section 1: Quick Contact Form -->
+                <div class="contact-form-section">
+                    <h3>Quick Contact</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reason">Reason for contacting (Optional)</label>
+                            <select id="reason" name="reason">
+                                <option value="">Select a reason...</option>
+                                <option value="Photography Inquiry">Photography Inquiry</option>
+                                <option value="Collaboration">Collaboration</option>
+                                <option value="General Question">General Question</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-button">Submit</button>
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+
+                <!-- Section 2: Direct Contact -->
+                <div class="direct-contact-section">
+                    <h3>Direct Contact</h3>
+                    <div class="direct-contact-info">
+                        <p><strong>Email:</strong> <a href="mailto:mccarthurmay@gmail.com">mccarthurmay@gmail.com</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:3156793214">(315) 679-3214</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/contact-form.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximillian May - Photo Map</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="css/photography.css">
+    <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav id="main-nav">
+        <div id="nav-name">MAXIMILLIAN MAY</div>
+        <div id="nav-links">
+            <a href="photography.html#favorites" class="nav-link">Favorites</a>
+            <a href="photography.html" class="nav-link">Grid</a>
+            <a href="rugby.html" class="nav-link">Rugby</a>
+            <a href="map.html" class="nav-link active">Map</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="https://www.instagram.com/max_mayy/" target="_blank" id="nav-instagram" class="nav-link">
+                <img src="assets/images/instagram.png" alt="Instagram" class="instagram-icon">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Map Container -->
+    <div id="map-container"></div>
+
+    <!-- Photo lightbox -->
+    <div id="photo-lightbox" class="hidden">
+        <div id="lightbox-backdrop"></div>
+        <div id="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+            <div id="lightbox-info" class="hidden">
+                <div id="lightbox-info-inner">
+                    <div class="info-row" id="info-location" style="display:none">
+                        <span class="info-label">Location</span>
+                        <span class="info-value" id="info-location-val"></span>
+                    </div>
+                    <div class="info-row" id="info-date" style="display:none">
+                        <span class="info-label">Date</span>
+                        <span class="info-value" id="info-date-val"></span>
+                    </div>
+                    <div class="info-row" id="info-camera" style="display:none">
+                        <span class="info-label">Camera</span>
+                        <span class="info-value" id="info-camera-val"></span>
+                    </div>
+                    <div class="info-row" id="info-lens" style="display:none">
+                        <span class="info-label">Lens</span>
+                        <span class="info-value" id="info-lens-val"></span>
+                    </div>
+                    <div class="info-row" id="info-focal" style="display:none">
+                        <span class="info-label">Focal Length</span>
+                        <span class="info-value" id="info-focal-val"></span>
+                    </div>
+                    <div class="info-row" id="info-aperture" style="display:none">
+                        <span class="info-label">Aperture</span>
+                        <span class="info-value" id="info-aperture-val"></span>
+                    </div>
+                    <div class="info-row" id="info-shutter" style="display:none">
+                        <span class="info-label">Shutter</span>
+                        <span class="info-value" id="info-shutter-val"></span>
+                    </div>
+                    <div class="info-row" id="info-iso" style="display:none">
+                        <span class="info-label">ISO</span>
+                        <span class="info-value" id="info-iso-val"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="lightbox-close">×</button>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet MarkerCluster -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+    <!-- Main entry -->
+    <script type="module" src="js/photography/photo-map.js"></script>
+</body>
+</html>

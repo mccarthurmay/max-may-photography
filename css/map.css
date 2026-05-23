@@ -1,0 +1,149 @@
+/* Map container fills viewport below nav */
+#map-container {
+    position: fixed;
+    top: 60px; /* Height of nav */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+/* Dark B&W tile layer */
+.leaflet-tile-pane {
+    filter: grayscale(1) brightness(.75) invert(0);
+}
+
+/* Move zoom controls down to avoid nav overlap */
+.leaflet-top.leaflet-left {
+    top: 20px;
+}
+
+/* Custom marker styling for pins */
+.photo-marker {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.photo-marker:hover {
+    background-color: #f39c12;
+    transform: scale(1.2);
+    transition: all 0.2s;
+}
+
+/* Photo popup styling */
+.photo-popup {
+    width: 600px;
+    max-width: 90vw;
+    max-height: 80vh;
+}
+
+.photo-popup-content {
+    display: flex;
+    gap: 10px;
+    height: 55vh;
+    max-height: 55vh;
+    overflow-y: auto;
+    padding: 12px;
+}
+
+.popup-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.photo-popup-item {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 4px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.photo-popup-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.photo-popup-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Custom scrollbar for popup */
+.photo-popup-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.photo-popup-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+.photo-popup-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+.photo-popup-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Firefox scrollbar */
+.photo-popup-content {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+}
+
+/* Leaflet popup customization */
+.leaflet-popup-content-wrapper {
+    background-color: rgba(26, 26, 26, 0.95);
+    color: #fff;
+    border-radius: 8px;
+    padding: 0;
+}
+
+.leaflet-popup-content {
+    margin: 0;
+    width: 600px !important;
+}
+
+.leaflet-popup-tip {
+    background-color: rgba(26, 26, 26, 0.95);
+}
+
+/* Close button styling - hidden */
+.leaflet-popup-close-button {
+    display: none !important;
+}
+
+/* Cluster marker — same style as individual markers, no label */
+.cluster-marker {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+/* Hide default markercluster styles */
+.leaflet-cluster-anim .leaflet-marker-icon,
+.leaflet-cluster-anim .leaflet-marker-shadow {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-in;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .photo-popup {
+        width: 90vw;
+    }
+
+    .photo-popup-content {
+        height: 60vh;
+        max-height: 60vh;
+    }
+}
